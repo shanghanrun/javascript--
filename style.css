@@ -78,6 +78,62 @@ body {
     display: none;
 }
 
-.search input:focus~span {
+.search input:valid ~span {
     display: block;
+}
+
+.wrapper ul li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 17px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #ccc;
+}
+
+ul .word p{
+    font-size: 22px;
+    font-weight:500;
+}
+ul .word span{
+    font-size: 12px;
+    color: #989898;
+}
+ul .word i{
+    cursor: pointer;
+    font-size:15px;
+    color: #999;
+}
+ul li:last-child{
+    margin-bottom: 0px;
+    padding-bottom:0px;
+    border-bottom:0px;
+}
+
+.content li .details{
+    border-left: 3px solid #4d59fb;
+    padding-left: 10px;
+    border-radius: 4px 0 0 4px;
+}
+.content li .details p{
+    font-size: 17px;
+    font-weight:500;
+}
+.content li .details span{
+    font-size: 15px;
+    color: #7e7e7e;
+}
+
+.synonyms .details .list{
+    display:flex;
+    flex-wrap:wrap;
+}
+.synonyms .details .list span{
+    cursor: pointer;
+    margin-right: 5px;
+    text-decoration: underline;
+}
+
+.wrapper ul{
+    display: none
 }
