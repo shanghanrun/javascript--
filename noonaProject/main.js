@@ -15,18 +15,18 @@ let computerNumber = 0
 let userNumber =0
 let userNumberList =[]
 let remain = 5
-let playButton = document.getElementById('play-button')
-let userInput = document.getElementById('user-input')
-let remainTag = document.getElementById('remain-tag')
-let resultTag = document.getElementById('result-tag')
-let resetButton = document.getElementById('reset-button')
-let image = document.getElementById('image')
+const playButton = document.getElementById('play-button')
+const userInput = document.getElementById('user-input')
+const remainTag = document.getElementById('remain-tag')
+const resultTag = document.getElementById('result-tag')
+const resetButton = document.getElementById('reset-button')
+const image = document.getElementById('image')
 
-let pending ='https://i.pinimg.com/originals/04/3b/7a/043b7a72e6f3fd332bdf88e94f7ecff3.gif'
-let down ='https://media.tenor.co/images/1a344b45b97ac46cf0f23610392899ac/raw'
-let up ='https://i.pinimg.com/originals/e3/a8/b0/e3a8b02ab7761dc6d938668fc879a350.gif'
-let success ='https://media.giphy.com/media/F3i3pwWJtS5c4/giphy.gif'
-let fail ='https://i.pinimg.com/originals/c6/c0/09/c6c0099d50376c25d1e436a93197ae26.gif'
+const pending ='https://i.pinimg.com/originals/04/3b/7a/043b7a72e6f3fd332bdf88e94f7ecff3.gif'
+const down ='https://media.tenor.co/images/1a344b45b97ac46cf0f23610392899ac/raw'
+const up ='https://i.pinimg.com/originals/e3/a8/b0/e3a8b02ab7761dc6d938668fc879a350.gif'
+const success ='https://media.giphy.com/media/F3i3pwWJtS5c4/giphy.gif'
+const fail ='https://i.pinimg.com/originals/c6/c0/09/c6c0099d50376c25d1e436a93197ae26.gif'
 
 // 인풋을 넣고 enter를 눌러도 go버튼(playButton)누른 효과 나타나게
 userInput.addEventListener('keydown', enterKeyHandler);
@@ -109,16 +109,16 @@ function play() {
 
 function reset() {
     isFirst = true
-   remain =5
-   userNumberList =[]
-   remainTag.innerHTML = `남은횟수: ${remain}`
-   resultTag.innerHTML = '메시지'
-   userInput.value =''
-   image.src = pending
-   activateGoButton()
-   playButton.addEventListener('click', play);
-   userInput.addEventListener('keydown', enterKeyHandler);
-   userInput.addEventListener('focus', initialize)
+    remain =5
+    userNumberList =[]
+    remainTag.innerHTML = `남은횟수: ${remain}`
+    resultTag.innerHTML = '메시지'
+    userInput.value =''
+    image.src = pending
+    activateGoButton()
+    playButton.addEventListener('click', play);
+    userInput.addEventListener('keydown', enterKeyHandler);
+    userInput.addEventListener('focus', initialize)
 }
 
 function deactivateGoButton(){  
